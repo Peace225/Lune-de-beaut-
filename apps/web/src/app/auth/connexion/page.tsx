@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase";
 
 export default function ConnexionPage() {
   const supabase = createClient();

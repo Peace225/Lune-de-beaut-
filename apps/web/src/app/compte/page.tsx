@@ -40,7 +40,7 @@ const menuItems = [
   },
 ];
 
-// Animations - CORRIGÉ
+// Animations - CORRIGÉ VERCEL
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -54,7 +54,7 @@ const itemVariants: Variants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } as const
   },
 };
 
@@ -188,7 +188,7 @@ export default function ComptePage() {
           </div>
         </motion.section>
 
-        {/* AUTRES SECTIONS (GRID 2 COLONNES POUR UN GAIN DE PLACE) */}
+        {/* AUTRES SECTIONS */}
         <motion.div variants={itemVariants} className="mt-8 grid gap-8 md:grid-cols-2">
           
           {/* FAVORIS */}

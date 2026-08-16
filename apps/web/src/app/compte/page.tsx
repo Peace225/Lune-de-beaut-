@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   User,
   Package,
@@ -40,8 +40,8 @@ const menuItems = [
   },
 ];
 
-// Animations
-const containerVariants = {
+// Animations - CORRIGÉ
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -49,9 +49,13 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  },
 };
 
 export default function ComptePage() {
@@ -173,7 +177,7 @@ export default function ComptePage() {
               Aucune commande pour le moment
             </h3>
             <p className="mt-3 max-w-md text-sm text-[#77665d] leading-relaxed">
-              Votre historique d'achats est vide. Explorez notre catalogue pour découvrir nos essentiels beauté et soins d'exception.
+              Votre historique d&apos;achats est vide. Explorez notre catalogue pour découvrir nos essentiels beauté et soins d&apos;exception.
             </p>
             <Link
               href="/produits"

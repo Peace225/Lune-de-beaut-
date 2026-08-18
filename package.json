@@ -11,9 +11,13 @@
     "dev": "npx next dev apps/web",
     "dev:web": "npx next dev apps/web",
     "dev:api": "npm --workspace=api run dev",
-    "dev:all": "concurrently \"npm:dev:web\" \"npm:dev:api\""
+    "build": "npm run build --workspace=web",
+    "start": "npm run start --workspace=web"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.4"
   }
 }

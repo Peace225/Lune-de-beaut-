@@ -4,4 +4,4 @@ dist
 build
 .env
 .env.local
-package-lock.json
+.env.*.local

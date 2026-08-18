@@ -8,11 +8,10 @@
     "apps/mobile"
   ],
   "scripts": {
-    "dev": "npm run dev:web",
-    "dev:all": "concurrently \"npm:dev:web\" \"npm:dev:api\"",
-    "dev:web": "npm --workspace apps/web run dev",
-    "dev:api": "npm --workspace apps/api run dev",
-    "dev:mobile": "npm --workspace apps/mobile run dev"
+    "dev": "npx next dev apps/web",
+    "dev:web": "npx next dev apps/web",
+    "dev:api": "npm --workspace=api run dev",
+    "dev:all": "concurrently \"npm:dev:web\" \"npm:dev:api\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

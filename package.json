@@ -8,10 +8,10 @@
     "apps/mobile"
   ],
   "scripts": {
-    "dev": "npx next dev apps/web",
-    "dev:web": "npx next dev apps/web",
-    "dev:api": "npm --workspace=api run dev",
-    "build": "npm run build --workspace=web",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:api": "npm run dev --workspace=api",
+    "build": "npm run build --workspaces --if-present",
     "start": "npm run start --workspace=web"
   },
   "devDependencies": {

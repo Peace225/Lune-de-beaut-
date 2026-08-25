@@ -1,22 +1,31 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:px-8">
+        
+        {/* Section Image */}
         <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] bg-[#eadbd1]">
-          <div className="absolute left-12 top-12 h-72 w-56 rounded-[140px_140px_20px_20px] bg-[#d3b09b]" />
+          <Image
+            src="/images/aboutt.jpg" // ⚠️ Assurez-vous que l'extension est correcte (.PNG, .jpg, etc.)
+            alt="Rituel de soin Lune de Beauté"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
 
-          <div className="absolute bottom-10 right-10 h-52 w-40 rounded-[100px_100px_15px_15px] bg-[#f1e6df] shadow-xl" />
-
-          <div className="absolute bottom-10 left-10 rounded-full bg-white/70 px-5 py-3">
+          {/* Badge flottant */}
+          <div className="absolute bottom-10 left-10 rounded-full bg-white/80 backdrop-blur-sm px-5 py-3 shadow-lg">
             <span className="font-serif text-[#3a2b25]">
               Nature • Soin • Éclat
             </span>
           </div>
         </div>
 
+        {/* Section Texte */}
         <div className="flex flex-col justify-center">
           <p className="text-sm uppercase tracking-[0.25em] text-[#a98265]">
             Notre philosophie
